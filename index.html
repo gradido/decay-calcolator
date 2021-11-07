@@ -71,8 +71,8 @@
       var i_from = $('#input_from').val();
       var i_to = $('#input_to').val();
      
-      $('#date_from').text('Von: ' + i_from);
-      $('#date_to').text('Bis: ' + i_to);
+      $('#date_from').text('Von: ' + moment(i_from).format('DD.MM.YYYY'));
+      $('#date_to').text('Bis: ' + moment(i_to).format('DD.MM.YYYY'));
 
       var startfrom = moment(i_from);
       var endto = moment(i_to);
