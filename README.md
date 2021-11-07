@@ -1,4 +1,4 @@
-# decay-calcolator
+# decay-calculator
 ## Berechnung der Vergänglichkeit von Gradido - GDD
 ## Calculation of the decay of Gradido - GDD
 
