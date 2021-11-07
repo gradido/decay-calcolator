@@ -4,6 +4,7 @@
 
 Die Berechung der Vergänglichkeit von Gradido GDD kann mit diesem Rechner dargestellt werden.
 The calculation of the transience of Gradido GDD can be displayed with this calculator.
+Tutorial: https://youtu.be/7ie6SegwZHw
 
 
 
