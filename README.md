@@ -21,7 +21,7 @@ The calculation of the transience of Gradido GDD can be displayed with this calc
 - Momentjs
   
   
-  ![Bildschirmfoto von 2021-11-07 16-57-37](https://user-images.githubusercontent.com/1324583/140652367-02c76a66-76c1-4f48-9db7-5da20d057ebd.png)
+  ![Bildschirmfoto von 2021-11-07 17-12-09](https://user-images.githubusercontent.com/1324583/140652866-95eb832b-ca2a-4a4d-a7f8-6d3513dada16.png)
 
 
 
