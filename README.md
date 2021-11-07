@@ -9,7 +9,8 @@ The calculation of the transience of Gradido GDD can be displayed with this calc
 
 ### Formel - Formula
 
-> x - x * 0.99999997802044727^Sekunden
+> x - x * 0.99999997802044727^Sekunden  
+(Diese Formel ist erstellt von https://github.com/einhornimmond )
 
 
 
