@@ -19,9 +19,7 @@ The calculation of the transience of Gradido GDD can be displayed with this calc
 - Bootstrap
 - Momentjs
 
-![Bildschirmfoto von 2021-11-07 12-07-12](https://user-images.githubusercontent.com/1324583/140642546-469c19bc-13a1-4fc9-99be-815ab7544b2e.png)
-
-![Bildschirmfoto von 2021-11-07 12-06-57](https://user-images.githubusercontent.com/1324583/140642548-a38d100d-a738-49fe-91bc-4257acaa8dcb.png)
+![Bildschirmfoto von 2021-11-07 16-04-55](https://user-images.githubusercontent.com/1324583/140650563-a40a8865-62e5-40d0-acb2-41938582c2e1.png)
 
 
 
@@ -37,6 +35,7 @@ eine beispielrechnung / formel mit 1000 GDD
 also 0,00002198 GDD Decay bei Sekunde 1 bei 1000 GDD
 
 sekunde 2 
+
 wäre 
 (1000  - 0,00002198) - (( 1000 - 0,00002198 ) * 0,99999997802044727)  = 0,00002198
 
