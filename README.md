@@ -58,6 +58,6 @@ Sekunde 3
 ### TODO 
 
 - Es sollte ein min="" Datum im zweiten Datum vom ersten Datum automatisch ersetzt werden. 
-- Die Prozentangabe vom GDD sollte noch hinzugefügt werden. 
+- alertbox bleibt lehr nach hide(), sollte bei neuberechung wieder formel erscheinen
 - Startdatum mit JETZT Datum ausfüllen 
 - Die Rechnung besser dartsellen und erklären 
