@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Decay Calculator</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+
+</head>
+<body>
+  <div id="app" class="container">
+    <h1 class="mt-5 mb-5">Gradido Vergänglichkeitsrechner</h1>
+         
+    <label for="gdd-input">Betrag GDD</label>
+    <input type="text" id="input_amount" class="form-control"></input>
+    <div class="form-group">
+      <label >Von</label>
+      <input type="date" id="input_from" name="bday" class="form-control">
+    </div>
+    <div class="form-group">
+      <label >Bis</label>
+      <input type="date" id="input_to" name="bday" class="form-control" >
+    </div>
+ 
+    <div v-if="decays2 > 0">
+      <p id="date_from"></p>
+      <p  id="date_to"></p>
+      <p  id="date_days"></p>
+      <p  id="date_seconds"></p>
+      <p>
+        <b id="date_decay" > </b> 
+      </p>
+    </div>
+
+    <div id="alert_box" class="alert alert-info" role="alert">
+      <span id="texttext"></span><span id="seconds"></span>
+    </div>
+
+    <div class="row text-center mt-5">
+      <div class="col"><button type="button" id="cancel" class="btn btn-primary btn-lg">Formular zurücksetzen</button></div>
+    </div>
+
+  </div>
+</body>
+<script>
+
+  $(document).ready(function() {
+    console.log()
+
+    $('#alert_box').hide();
+
+    $('#input_to').change(function(){    
+
+      var i_amount = $('#input_amount').val();
+      var i_from = $('#input_from').val();
+      var i_to = $('#input_to').val();
+     
+      $('#date_from').text('Von: ' + i_from);
+      $('#date_to').text('Bis: ' + i_to);
+
+      var startfrom = moment(i_from);
+      var endto = moment(i_to);
+
+      var days = endto.diff(startfrom, 'days');
+      var seconds = endto.diff(startfrom, 'seconds');
+
+      $('#date_days').text('Tage: ' + days);
+      $('#date_seconds').text('Secunden: ' + seconds);
+
+      var decay = i_amount - i_amount * Math.pow(0.99999997802044727, seconds)
+
+      $('#date_decay').text('Vergänglichkeit: ' + decay.toFixed(2) + ' GDD');
+      $('#alert_box').show();
+      $('#texttext').text(' '+ i_amount +' - '+ i_amount +'  * 0.99999997802044727 ');
+      $('#seconds').html('<sup>'+seconds+'</sup>)');
+   });
+
+   $('#cancel').click(function(){ 
+      $('#input_amount').val('');
+      $('#input_from').val('');
+      $('#input_to').val('');
+      $('#date_from').text('');
+      $('#date_to').text('');
+      $('#date_days').text('');
+      $('#date_seconds').text('');
+      $('#date_decay').text('');
+      $('#alert_box').text('').hide();
+   });
+  });
+ 
+</script>
+</html>
