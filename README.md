@@ -4,7 +4,6 @@
 
 Die Berechung der Vergänglichkeit von Gradido GDD kann mit diesem Rechner dargestellt werden.
 The calculation of the transience of Gradido GDD can be displayed with this calculator.
-Tutorial: https://youtu.be/7ie6SegwZHw
 
 
 
@@ -58,6 +57,5 @@ Sekunde 3
 ### TODO 
 
 - Es sollte ein min="" Datum im zweiten Datum vom ersten Datum automatisch ersetzt werden. 
-- alertbox bleibt lehr nach hide(), sollte bei neuberechung wieder formel erscheinen
 - Startdatum mit JETZT Datum ausfüllen 
 - Die Rechnung besser dartsellen und erklären 

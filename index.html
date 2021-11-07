@@ -38,11 +38,19 @@
       </p>
       <p id="percent_decay"></p>
       <p id="percent_remain"></p>
+      
+      <p>
+        <b id="summe"></b>
+      </p>
     </div>
 
     <div id="alert_box" class="alert alert-info" role="alert">
       <span id="texttext"></span>
       <span id="seconds"></span>
+    </div>
+
+    <div id="alert_box_text" class="alert alert-light" role="alert">
+       
     </div>
 
     <div class="row text-center mt-5">
@@ -54,7 +62,6 @@
 <script>
 
   $(document).ready(function() {
-    console.log()
 
     $('#alert_box').hide();
 
@@ -84,10 +91,10 @@
       $('#seconds').html('<sup>' + seconds + '</sup>');
       $('#percent_decay').text("Der vergangene Anteil: " + (decay/i_amount*100).toFixed(2) + " %");
       $('#percent_remain').text("Der verbleibende Anteil: " + ((i_amount-decay)/i_amount*100).toFixed(2) + "%");
-
-      //console.log(decay/i_amount*100)
-      //console.log((i_amount-decay)/i_amount*100)
-   });
+      $('#summe').text("Summe: " + (i_amount - decay).toFixed(2) + 'GDD ');
+      var summeText = 'Bei einem Betrag von  '+ i_amount +' GDD und einer Zeitspanne von ' + days + ' Tagen (' + seconds + ' Sekunden), hat man eine Vergänglichkeit von '+ decay.toFixed(2)+' GDD ('+decay+'). Es bleiben also von den 1000 GDD '+((i_amount-decay)/i_amount*100).toFixed(2) + "%"+' übrig.  <br> <b>Das sind in Summe ' +(i_amount - decay).toFixed(2)+' GDD</b>';
+      $('#alert_box_text').html(summeText);
+    });
 
    $('#cancel').click(function(){ 
       $('#input_amount').val('');
@@ -98,7 +105,7 @@
       $('#date_days').text('');
       $('#date_seconds').text('');
       $('#date_decay').text('');
-      $('#alert_box').text('').hide();
+      $('#alert_box').hide();
       $('#percent_decay').text('');
       $('#percent_remain').text('');
 
